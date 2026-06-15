@@ -17,5 +17,9 @@
   "bugs": {
     "url": "https://github.com/Sijan666/backendStream/issues"
   },
-  "homepage": "https://github.com/Sijan666/backendStream#readme"
+  "homepage": "https://github.com/Sijan666/backendStream#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {}
 }
