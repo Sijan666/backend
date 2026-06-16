@@ -6,7 +6,7 @@ const app = express()
 
 app.use(express.json())
 
-app.get('/bank' , bankMiddlewares , bankController )
+app.get('/bankAccount' , bankMiddlewares , bankController )
 
 app.listen(5000,()=>{
     console.log("server is running")
