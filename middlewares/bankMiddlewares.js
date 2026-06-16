@@ -4,7 +4,7 @@ const bankMiddlewares = (req,res,next)=>{
     let pass = req.headers.authorization
 
     if (password === pass) {
-        // next()
+        next()
     }
     else{
         res.send('wrong password')
