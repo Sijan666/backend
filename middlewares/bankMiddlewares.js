@@ -1,3 +1,4 @@
+// middleware for bank account
 const bankMiddlewares = (req,res,next)=>{
     let password = "123456"
     let pass = req.headers.authorization
