@@ -6,7 +6,7 @@ const bankMiddlewares = (req,res,next)=>{
         next()
     }
     else{
-        res.send('tmi chor')
+        res.send('access denied')
     }
 }
 
