@@ -4,7 +4,7 @@ const bankController = require('./controller/bankController');
 
 const app = express()
 
-// middleware for text to json
+middleware for text to json
 app.use(express.json())
 
 app.get('/bankAccount' , bankMiddlewares , bankController )
