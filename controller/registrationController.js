@@ -6,7 +6,7 @@ const registrationController = async (req,res)=>{
     const existingEmail = await User.findOne({email:email})
     
     if (existingEmail) {
-        res.send('user already exist')
+        return res.send('user already exist')
     }
 
     const user = new User({
@@ -21,9 +21,10 @@ const registrationController = async (req,res)=>{
 
 const allUserController = async (req,res) => {
     const allUser = await User.find({})
+    res.send(allUser)
 }
 
-module.exports = registrationController , allUserController
+module.exports = {registrationController , allUserController}
 
 // CRUD 
 // C = Create
