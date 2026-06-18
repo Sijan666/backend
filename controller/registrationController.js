@@ -32,6 +32,10 @@ const deleteUser = async (req,res) => {
     res.send('user deleted')
 }
 
+const updateController = async (req,res) => {
+    
+}
+
 module.exports = {registrationController , allUserController , deleteUser}
 
 // CRUD 
