@@ -24,7 +24,15 @@ const allUserController = async (req,res) => {
     res.send(allUser)
 }
 
-module.exports = {registrationController , allUserController}
+const deleteUser = async (req,res) => {
+    const {id} = req.params
+
+    await User.findByIdAndDelete(id)
+
+    res.send('user deleted')
+}
+
+module.exports = {registrationController , allUserController , deleteUser}
 
 // CRUD 
 // C = Create
