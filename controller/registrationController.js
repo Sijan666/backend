@@ -2,7 +2,6 @@ const User = require('../model/usermodel')
 
 const registrationController = async (req,res)=>{
     const { username , email , pass} = req.body
-
     const existingEmail = await User.findOne({email:email})
     
     if (existingEmail) {
@@ -26,14 +25,13 @@ const allUserController = async (req,res) => {
 
 const deleteUser = async (req,res) => {
     const {id} = req.params
-
     await User.findByIdAndDelete(id)
-
     res.send('user deleted')
 }
 
 const updateController = async (req,res) => {
-    
+    const {id} = req.params
+    let data = await User.findByIdAndUpdate
 }
 
 module.exports = {registrationController , allUserController , deleteUser}
