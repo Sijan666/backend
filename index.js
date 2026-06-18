@@ -4,7 +4,7 @@ const express = require('express');
 const bankMiddlewares = require('./middlewares/bankMiddlewares');
 const bankController = require('./controller/bankController');
 const mongoose =  require('mongoose');
-const registrationController = require('./controller/registrationController');
+const {registrationController, allUserController} = require('./controller/registrationController');
 
 mongoose.connect('mongodb+srv://666majharulislam_db_user:25250180@cluster0.nzekssh.mongodb.net/todo?appName=Cluster0').then(()=>{
     console.log('Database Connected');
