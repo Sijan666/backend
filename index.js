@@ -4,7 +4,7 @@ const express = require('express');
 const bankMiddlewares = require('./middlewares/bankMiddlewares');
 const bankController = require('./controller/bankController');
 const mongoose =  require('mongoose');
-const {registrationController, allUserController} = require('./controller/registrationController');
+const {registrationController, allUserController, deleteUser} = require('./controller/registrationController');
 
 mongoose.connect('mongodb+srv://666majharulislam_db_user:25250180@cluster0.nzekssh.mongodb.net/todo?appName=Cluster0').then(()=>{
     console.log('Database Connected');
@@ -19,7 +19,11 @@ app.post('/registration', registrationController)
 
 app.get('/allUser' , allUserController)
 
+app.delete('/user/:id', deleteUser)
+
 app.get('/bankAccount' , bankMiddlewares , bankController )
+
+app.post('/update/:id' ,)
 
 app.listen(5000,()=>{
     console.log("server is running")
