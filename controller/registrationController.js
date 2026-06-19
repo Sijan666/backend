@@ -61,8 +61,8 @@ const updateController = async (req,res) => {
 
 // const deleteUser = async (req,res) => {
 //     const {id} = req.params
-//     await User.findByIdAndDelete(id)
-//     res.send('delete')
+//     await User.findOneAndDelete(id)
+//     res.send('user deleted')
 // }
 
 // const update = async (req,res) => {
