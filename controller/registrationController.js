@@ -3,7 +3,7 @@ const User = require('../model/usermodel')
 const registrationController = async (req,res)=>{
     const { username , email , pass} = req.body
     const existingEmail = await User.findOne({email:email})
-    
+
     if (existingEmail) {
         return res.send('user already exist')
     }
@@ -35,18 +35,16 @@ const updateController = async (req,res) => {
     res.send('data updated')
 }
 
-// practice
 // const registration = async (req,res) => {
 //     const {username , email , pass} = req.body
-//     const existing = await User.findOne({email:email})
-
-//     if (existing) {
+//     const exist = await User.findOne({email:email})
+//     if (exist) {
 //         return res.send('User already exist')
 //     }
 
 //     const user = new User({
-//         username : username,
-//         email : email,
+//         username : username , 
+//         email : email , 
 //         pass : pass
 //     })
 
@@ -54,21 +52,21 @@ const updateController = async (req,res) => {
 //     res.send(user)
 // }
 
-// const allUser = async (req,res) => {
-//     const alluser = await User.find({})
-//     res.send(alluser)
+// const allUserController = async (req,res) => {
+//     const allUser = await User.find({})
+//     res.send(allUser)
 // }
 
 // const deleteUser = async (req,res) => {
 //     const {id} = req.params
-//     await User.findOneAndDelete(id)
+//     await User.findByIdAndDelete(id)
 //     res.send('user deleted')
 // }
 
-// const updateUser = async (req,res) => {
+// const updateData = async (req,res) => {
 //     const {id} = req.params
-//     let data = await User.findByIdAndUpdate({_id:id})
-//     res.send('data updated')
+//     await User.findByIdAndUpdate({_id:id},req.body)
+//     res.send("updated")
 // }
 
 module.exports = {registrationController , allUserController , deleteUser , updateController}
