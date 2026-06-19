@@ -49,7 +49,7 @@ const updateController = async (req,res) => {
 //         email : email,
 //         pass : pass
 //     })
-    
+
 //     user.save()
 //     res.send(user)
 // }
