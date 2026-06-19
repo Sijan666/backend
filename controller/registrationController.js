@@ -55,8 +55,8 @@ const updateController = async (req,res) => {
 // }
 
 // const allUser = async (req,res) => {
-//     const all = await User.find({})
-//     res.send(all)
+//     const alluser = await User.find({})
+//     res.send(alluser)
 // }
 
 // const deleteUser = async (req,res) => {
