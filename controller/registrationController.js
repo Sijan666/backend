@@ -36,12 +36,12 @@ const updateController = async (req,res) => {
 }
 
 // practice
-// const reg = async (req,res) => {
+// const registration = async (req,res) => {
 //     const {username , email , pass} = req.body
-//     const exist = await User.findOne({email:email})
+//     const existing = await User.findOne({email:email})
 
-//     if (exist) {
-//         return res.send('exist')
+//     if (existing) {
+//         return res.send('User already exist')
 //     }
 
 //     const user = new User({
@@ -49,7 +49,7 @@ const updateController = async (req,res) => {
 //         email : email,
 //         pass : pass
 //     })
-
+    
 //     user.save()
 //     res.send(user)
 // }
