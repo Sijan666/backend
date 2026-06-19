@@ -65,10 +65,10 @@ const updateController = async (req,res) => {
 //     res.send('user deleted')
 // }
 
-// const update = async (req,res) => {
+// const updateUser = async (req,res) => {
 //     const {id} = req.params
-//     let data = await User.findByIdAndUpdate({_id:id},req.body)
-//     res.send('updated')
+//     let data = await User.findByIdAndUpdate({_id:id})
+//     res.send('data updated')
 // }
 
 module.exports = {registrationController , allUserController , deleteUser , updateController}
