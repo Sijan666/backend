@@ -25,9 +25,9 @@ app.get('/bankAccount' , bankMiddlewares , bankController )
 
 app.post('/update/:id' , updateController)
 
-// app.listen(5000,()=>{
-//     console.log("server is running")
-// })
+app.listen(5000,()=>{
+    console.log("server is running")
+})
 
 
 // mongodb+srv://666majharulislam_db_user:<db_password>@cluster0.nzekssh.mongodb.net/?appName=Cluster0
