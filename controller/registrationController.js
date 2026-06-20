@@ -26,7 +26,9 @@ const allUserController = async (req,res) => {
 const deleteUser = async (req,res) => {
     const {id} = req.params
     await User.findByIdAndDelete(id)
-    res.send('user deleted')
+    res.send({
+        message : "user has been deleted"
+    })
 }
 
 const updateController = async (req,res) => {
